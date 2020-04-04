@@ -1,0 +1,33 @@
+{
+  "name": "erl",
+  "version": "1.0.0",
+  "description": "Emergency resource locator is a simple authentication less application which allows users to raise a request for any resource needed by using just an otp password as source of authentication.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kashyapkbandi/ERL.git"
+  },
+  "keywords": [
+    "ERL",
+    "Emergency",
+    "Resource",
+    "Corona",
+    "COVID-19"
+  ],
+  "author": "Kashyap Kalakbandi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kashyapkbandi/ERL/issues"
+  },
+  "homepage": "https://github.com/kashyapkbandi/ERL#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "server": "^1.0.27"
+  }
+}
