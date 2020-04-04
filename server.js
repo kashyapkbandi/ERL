@@ -26,7 +26,7 @@ res.render('main');
 });
 
 
-app.post('',(req,res)=>{
+app.get('',(req,res)=>{
 res.render('main');
 });
 
