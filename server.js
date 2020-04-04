@@ -30,8 +30,10 @@ app.get('',(req,res)=>{
 res.render('main');
 });
 
-
-
+app.get('login',(req,res)=>{
+res.render('loginpage');
+});
+    
 
 
 
