@@ -44,7 +44,7 @@ var appVerifier = window.recaptchaVerifier;
 
 
 
-firebase.auth().signInWithPhoneNumber(param, appVerifier)
+firebase.auth().signInWithPhoneNumber('918897116194', appVerifier)
 .then(function (confirmationResult) {
 // SMS sent. Prompt user to type the code from the message, then sign the
 // user in with confirmationResult.confirm(code).
