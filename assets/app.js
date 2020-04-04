@@ -15,11 +15,11 @@ appId: "1:706279289325:web:e7440c4df5d237b395b7e4"
 
 console.log('initializeApp firebase');
 
-firebase.auth().useDeviceLanguage();
+
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
+firebase.auth().useDeviceLanguage();
 
 //recaptchaVerifier
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
