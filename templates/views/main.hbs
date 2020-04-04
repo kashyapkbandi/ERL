@@ -28,20 +28,66 @@
 <!-- TODO: Add SDKs for Firebase products that you want to use
     https://firebase.google.com/docs/web/setup#available-libraries -->
 
-<script>
 
-</script>
 
- <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
   <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-  <script src="/__/firebase/7.13.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+
+  <script>
 
 
-<!-- Add Firebase products that you want to use -->
-<script src="/__/firebase/7.13.2/firebase-auth.js"></script>
-<script src="/__/firebase/7.13.2/firebase-firestore.js"></script>
-<script src="/__/firebase/init.js"></script>
+      // Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyAPKUxofW3dbDv_XBwmoBs6f8JBQe59kL4",
+    authDomain: "emergency-resource-locator.firebaseapp.com",
+    databaseURL: "https://emergency-resource-locator.firebaseio.com",
+    projectId: "emergency-resource-locator",
+    storageBucket: "emergency-resource-locator.appspot.com",
+    messagingSenderId: "706279289325",
+    appId: "1:706279289325:web:e7440c4df5d237b395b7e4"
+    };
+    
+    console.log('Lodaing firebase');
+
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    
+    firebase.auth().useDeviceLanguage();
+
+    //recaptchaVerifier
+    window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+
+    var phoneNumber = 8897116194;
+    var appVerifier = window.recaptchaVerifier;
+    firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
+.then(function (confirmationResult) {
+    // SMS sent. Prompt user to type the code from the message, then sign the
+    // user in with confirmationResult.confirm(code).
+
+    window.alert('user Confirm');
+
+    window.confirmationResult = confirmationResult;
+}).catch(function (error) {
+    // Error; SMS not sent
+    // ...
+});
+    
+
+const dbRef = firebase.database().ref();
+const usersRef = dbRef.child('users');
+
+console.log(usersRef);
+  </script>
 
  <script src="app.js"> </script>
 
