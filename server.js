@@ -27,7 +27,7 @@ res.render('loginpage');
 
 
 app.get('/captcha',(req,res)=>{
-res.send('main');
+res.render('main');
 });
 
 
