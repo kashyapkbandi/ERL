@@ -3,7 +3,7 @@
 window.alert("Loading please wait !");
 
 
-var param = getUrlVars();
+var param = window.location.href;
 param = param.split("?mobile=")[1];
 
 // Your web app's Firebase configuration
@@ -46,7 +46,7 @@ window.confirmationResult = confirmationResult;
 
 function getUrlVars() {
     var vars = {};
-    var parts = window.location.href;
+    var parts = 
     alert(parts);
     return vars;
 }
