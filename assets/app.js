@@ -24,7 +24,7 @@ firebase.initializeApp(firebaseConfig);
 //recaptchaVerifier
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
 
-var phoneNumber = '8897116194';
+var phoneNumber = '+918897116194';
 var appVerifier = window.recaptchaVerifier;
 firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
 .then(function (confirmationResult) {
