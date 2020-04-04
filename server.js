@@ -22,12 +22,12 @@ app.set('views',viewPath);
 
 
 app.get('',(req,res)=>{
-res.render('loginpage');
+res.render('main');
 });
 
 
-app.get('/captcha',(req,res)=>{
-res.render('main');
+app.get('/login',(req,res)=>{
+res.render('loginpage');
 });
 
 
