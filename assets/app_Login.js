@@ -22,6 +22,7 @@ var firebaseConfig = {
     var appVerifier = Window.location.href;
     appVerifier = appVerifier.split('?captchaResponse=')[1];
     console.log(appVerifier);
+    
     // var phoneNumber = '+918897116194';
 //var appVerifier = window.recaptchaVerifier;
 
