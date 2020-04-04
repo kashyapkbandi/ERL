@@ -25,7 +25,7 @@ firebase.auth().useDeviceLanguage();
 
 //recaptchaVerifier
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-alert('splpit'+param);
+
 
 // var phoneNumber = '+918897116194';
 var appVerifier = window.recaptchaVerifier;
