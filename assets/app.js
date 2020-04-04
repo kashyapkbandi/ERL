@@ -28,8 +28,19 @@ window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-contai
     'size': 'normal',
     'callback': function(response) {
       // reCAPTCHA solved, allow signInWithPhoneNumber , display mobile field.
-     var mobileFieldVar= document.getElementById('mobileField');
-      mobileFieldVar.style.removeProperty('display');
+     var loginForm= document.querySelector('.login-form');
+     loginForm + loginForm + `<form action="" method="get">
+     <div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
+     <h4 class="modal-title">Enter your mobile number</h4>
+     <div class="form-group">
+         <input type="text" class="form-control" name="mobile" id="mobileField" placeholder="mobilenumber" 
+         required="required" display="none">
+     </div>
+     
+     
+     <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">              
+     </form>`;
+     
 
     },
     'expired-callback': function() {
