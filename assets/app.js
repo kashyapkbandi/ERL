@@ -4,7 +4,8 @@ window.alert("Loading please wait !");
 
 
 var param = getUrlVars();
-alert(param);
+param = param.split("?mobile=")[1];
+
 // Your web app's Firebase configuration
 var firebaseConfig = {
 apiKey: "AIzaSyAPKUxofW3dbDv_XBwmoBs6f8JBQe59kL4",
@@ -26,10 +27,11 @@ firebase.auth().useDeviceLanguage();
 
 //recaptchaVerifier
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+alert('splpit'+param);
 
-var phoneNumber = '+918897116194';
+// var phoneNumber = '+918897116194';
 var appVerifier = window.recaptchaVerifier;
-firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
+firebase.auth().signInWithPhoneNumber(param, appVerifier)
 .then(function (confirmationResult) {
 // SMS sent. Prompt user to type the code from the message, then sign the
 // user in with confirmationResult.confirm(code).
