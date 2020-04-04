@@ -24,11 +24,26 @@ firebase.initializeApp(firebaseConfig);
 firebase.auth().useDeviceLanguage();
 
 //recaptchaVerifier
-window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+    'size': 'normal',
+    'callback': function(response) {
+      // reCAPTCHA solved, allow signInWithPhoneNumber , display mobile field.
+     var mobileFieldVar= document.getElementById('mobileField');
+      mobileFieldVar.style.removeProperty('display');
 
+    },
+    'expired-callback': function() {
+      // Response expired. Ask user to solve reCAPTCHA again.
+      // ...
+    }
+  });
 
 // var phoneNumber = '+918897116194';
 var appVerifier = window.recaptchaVerifier;
+
+
+
+
 firebase.auth().signInWithPhoneNumber(param, appVerifier)
 .then(function (confirmationResult) {
 // SMS sent. Prompt user to type the code from the message, then sign the
