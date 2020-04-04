@@ -28,8 +28,8 @@ window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-contai
     'size': 'normal',
     'callback': function(response) {
       // reCAPTCHA solved, allow signInWithPhoneNumber , redirected to Login Page.
-        console.log(response);
-      window.location = 'https://emergencyresourcelocator.herokuapp.com/login';
+        window.alert('--'+response);
+      window.location = 'https://emergencyresourcelocator.herokuapp.com/login'+'captchaResponse='+response;
 
     },
     'expired-callback': function() {
