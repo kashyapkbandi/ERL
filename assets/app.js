@@ -3,8 +3,6 @@
 window.alert("Loading please wait !");
 
 
-var param = window.location.href;
-param = param.split("?mobile=")[1];
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
@@ -37,16 +35,11 @@ firebase.auth().signInWithPhoneNumber(param, appVerifier)
 // user in with confirmationResult.confirm(code).
 
 window.alert('user Confirm');
-
+// enable the fields and button on the login page
 window.confirmationResult = confirmationResult;
 }).catch(function (error) {
 // Error; SMS not sent
 // ...
 });
 
-function getUrlVars() {
-    var vars = {};
-    var parts = 
-    alert(parts);
-    return vars;
-}
+
