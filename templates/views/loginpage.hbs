@@ -96,15 +96,15 @@
 <body>
     
 <div class="login-form">    
-<form action="/examples/actions/confirmation.php" method="post">
+<form action="https://emergencyresourcelocator.herokuapp.com/erlsite" method="get">
     <div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
     <h4 class="modal-title">Enter your mobile number</h4>
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="mobilenumber" required="required">
+        <input type="text" class="form-control" name="mobile" placeholder="mobilenumber" required="required">
     </div>
    
     
-    <input type="submit" class="btn btn-primary btn-block btn-lg" value="Proceed">              
+    <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">              
 </form>			
 <div class="text-center small"></div>
 </div>
@@ -114,7 +114,7 @@
 
 
 
-<script src="app.js"> </script>
+{{!-- <script src="app.js"> </script> --}}
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
