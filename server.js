@@ -21,7 +21,7 @@ app.set('views',viewPath);
 
 
 
-app.get('/erlsite',(req,res)=>{
+app.get('',(req,res)=>{
 res.render('loginpage');
 });
 
