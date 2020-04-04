@@ -22,17 +22,15 @@ app.set('views',viewPath);
 
 
 app.get('/erlsite',(req,res)=>{
-res.render('main');
-});
-
-
-app.get('',(req,res)=>{
-res.render('main');
-});
-
-app.get('/login',(req,res)=>{
 res.render('loginpage');
 });
+
+
+app.post('captcha',(req,res)=>{
+res.send('main');
+});
+
+
     
 
 
