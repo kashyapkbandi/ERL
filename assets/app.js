@@ -31,7 +31,7 @@ var firebaseConfig = {
     // SMS sent. Prompt user to type the code from the message, then sign the
     // user in with confirmationResult.confirm(code).
 
-    alert('user Confirm');
+    window.alert('user Confirm');
 
     window.confirmationResult = confirmationResult;
 }).catch(function (error) {
