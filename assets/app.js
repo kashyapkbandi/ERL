@@ -2,6 +2,9 @@
 
 window.alert("Loading please wait !");
 
+
+var param = getUrlVars();
+alert(param);
 // Your web app's Firebase configuration
 var firebaseConfig = {
 apiKey: "AIzaSyAPKUxofW3dbDv_XBwmoBs6f8JBQe59kL4",
@@ -39,3 +42,9 @@ window.confirmationResult = confirmationResult;
 // ...
 });
 
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href;
+    alert(parts);
+    return vars;
+}

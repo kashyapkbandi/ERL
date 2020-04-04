@@ -26,7 +26,7 @@ res.render('loginpage');
 });
 
 
-app.post('captcha',(req,res)=>{
+app.post('/captcha',(req,res)=>{
 res.send('main');
 });
 
